@@ -1,4 +1,4 @@
-backend/.build
-backend/.serverless
-backend/coverage
-backend/node_modules
+/backend/.build
+/backend/.serverless
+/backend/coverage
+/backend/node_modules
