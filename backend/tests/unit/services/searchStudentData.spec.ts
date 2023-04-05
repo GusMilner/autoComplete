@@ -13,8 +13,8 @@ describe('searchStudentData.ts Tests', () => {
     describe('searchStudentsByName() test:', () => {
         it(`returns filtered list of students`, () => {
             const searchStudentData = new SearchStudentData();
-            expect(searchStudentData.searchStudentsByName(`J`)).toBe(5);
-            expect(searchStudentData.searchStudentsByName(`Jo`)).toBe(4);
+            expect(searchStudentData.searchStudentsByName(`J`).length).toBe(5);
+            expect(searchStudentData.searchStudentsByName(`Jo`).length).toBe(4);
             expect(searchStudentData.searchStudentsByName(`Joh`).length).toBe(2);
         });
     });
