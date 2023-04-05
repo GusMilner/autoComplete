@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1680658984497" clover="3.2.0">
+  <project timestamp="1680658984497" name="All files">
+    <metrics statements="8" coveredstatements="8" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="3" elements="14" coveredelements="14" complexity="0" loc="8" ncloc="8" packages="1" files="1" classes="1"/>
+    <file name="searchStudentData.ts" path="/Users/milnerfamily/Projects/autoComplete/backend/src/services/searchStudentData.ts">
+      <metrics statements="8" coveredstatements="8" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="3"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="14" count="1" type="stmt"/>
+      <line num="79" count="2" type="stmt"/>
+      <line num="84" count="2" type="stmt"/>
+      <line num="85" count="20" type="cond" truecount="3" falsecount="0"/>
+      <line num="87" count="7" type="stmt"/>
+      <line num="89" count="13" type="stmt"/>
+      <line num="92" count="2" type="stmt"/>
+    </file>
+  </project>
+</coverage>

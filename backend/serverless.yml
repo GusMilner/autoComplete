@@ -1,0 +1,18 @@
+service: AutoCompleteSearchStudents
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+package:
+  individually: true
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+functions:
+  studentsSearch:
+    handler: src/lambdas/studentsSearch/index.handler
+    events:
+      - http:
+          method: get
+          path: /students/search
