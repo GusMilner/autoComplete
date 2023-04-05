@@ -1,0 +1,5 @@
+.build
+.serverless
+coverage
+node_modules
+package-lock.json
