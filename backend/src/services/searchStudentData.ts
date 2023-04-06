@@ -79,11 +79,11 @@ export class SearchStudentData
         this.students = SearchStudentData.students;
     }
 
-    searchStudentsByName(query: string): Student[]
+    searchStudentsByName(searchValue: string): Student[]
     {
-        const filterValue = query.toLowerCase();
+        const startsWithValue = searchValue.toLowerCase();
         const filteredResults = this.students.filter(student => {
-            if( student.lastName.toLowerCase().startsWith(filterValue, 0) || student.firstName.toLowerCase().startsWith(filterValue, 0))
+            if( student.lastName.toLowerCase().startsWith(startsWithValue, 0) || student.firstName.toLowerCase().startsWith(startsWithValue, 0))
             {
                 return student;
             }

@@ -12,11 +12,11 @@ app.use(`/students/search`, async (req: express.Request, res: express.Response, 
   try {
       let getStudents: Student[] = [];
       const searchStudentData = new SearchStudentData();
-      const filterValue = req.query.filter?.toString();
+      const searchValue = req.query.name?.toString();
     
-      if(filterValue)
+      if(searchValue)
       {
-        getStudents = searchStudentData.searchStudentsByName(filterValue);
+        getStudents = searchStudentData.searchStudentsByName(searchValue);
       }
     
       return res.status(200).json({
