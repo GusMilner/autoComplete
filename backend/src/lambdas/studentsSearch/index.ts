@@ -18,6 +18,10 @@ app.use(`/students/search`, async (req: express.Request, res: express.Response, 
       {
         getStudents = searchStudentData.searchStudentsByName(searchValue);
       }
+      else
+      {
+        getStudents = searchStudentData.students.slice(0,49).sort((a, b) => (a.lastName + a.firstName > b.lastName + b.firstName) ? 1 : -1);
+      }
     
       return res.status(200).json({
         students: getStudents
