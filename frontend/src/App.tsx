@@ -1,14 +1,14 @@
-import './App.css';
+import React from 'react';
 import CardHeader from '@mui/material/CardHeader';
-import StudentSearch from './components/StudentSearch.tsx';
+import StudentSearch from './components/StudentSearch';
 
 
 
-function App() {
+export const App = () => {
  
 
   return (
-    <div className="App">
+    <div style={{ textAlign: 'center' }}>
      <CardHeader
         title="Search for Student by name"
       />

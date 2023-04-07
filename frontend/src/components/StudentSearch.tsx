@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { SyntheticEvent, useEffect, useState } from 'react';
 import axios from "axios";
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
@@ -12,7 +12,7 @@ export default function StudentSearch() {
   
   // Get data from the API endpoint
   const fetchData = async (query?: string) => {
-    const baseUrl = `http://localhost:3000/dev/students/search`;
+    const baseUrl = `http://localhost:3001/dev/students/search`;
     const apiUrl = query ? baseUrl + `?name=${query}` : baseUrl;
 
     const result = await axios(apiUrl);
@@ -23,7 +23,7 @@ export default function StudentSearch() {
     fetchData();
   }, []);
 
-  const handleChange = async (event, value) => {
+  const handleChange = async (event: SyntheticEvent<Element, Event>, value: string) => {
       fetchData(value);
       setInputValue(value);    
   };

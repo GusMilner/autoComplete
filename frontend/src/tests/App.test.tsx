@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import React from 'react';
-import App from '../App.jsx';
+import App from '../App';
 
 describe('App tests', () => {
     it('should contains the heading 1', () => {
-    render(<App />);
+        render(<App />);
         const heading = screen.getByText(/Search for Student by name/i);
         expect(heading).toBeInTheDocument()
     });
